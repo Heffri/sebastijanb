@@ -109,11 +109,11 @@ const AboutSection = () => {
                     {group.title}
                   </h3>
                   <div className="flex flex-wrap gap-1.5">
-                    {group.items.map((item, j) => {}
-
-
-
-
+                    {group.items.map((item, j) => (
+                      <span key={j} className="px-2 py-1 text-xs font-body text-muted-foreground border border-border rounded">
+                        {item}
+                      </span>
+                    )
 
 
                   )}

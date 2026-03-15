@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="w-24 h-px bg-primary mb-8" />
 
         <p className="font-body text-xl text-muted-foreground max-w-xl leading-relaxed italic">
-          Maths & CS student. Mathematical statistics, data science, numerical methods.
+          Maths & CS Student. Mathematical Statistics, Data Science, Numerical Methods.
         </p>
 
         <div className="callout-box mt-12 max-w-lg">
