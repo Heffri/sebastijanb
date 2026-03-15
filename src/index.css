@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,51 +6,47 @@
 
 @layer base {
   :root {
-    --background: 220 25% 6%;
-    --foreground: 45 10% 90%;
+    --background: 0 0% 4%;
+    --foreground: 40 20% 92%;
 
-    --card: 220 20% 10%;
-    --card-foreground: 45 10% 90%;
+    --card: 0 0% 7%;
+    --card-foreground: 40 20% 92%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 45 10% 90%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 20% 92%;
 
-    --primary: 40 90% 55%;
-    --primary-foreground: 220 25% 6%;
+    --primary: 160 100% 50%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 220 15% 16%;
-    --secondary-foreground: 45 10% 80%;
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 40 10% 65%;
 
-    --muted: 220 15% 14%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 0 0% 11%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 200 60% 45%;
-    --accent-foreground: 220 25% 6%;
+    --accent: 160 60% 35%;
+    --accent-foreground: 40 20% 92%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 40 90% 55%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 160 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --font-display: 'JetBrains Mono', monospace;
-    --font-body: 'Source Sans 3', sans-serif;
+    --font-display: 'Space Mono', monospace;
+    --font-body: 'Inter', sans-serif;
 
-    --grid-color: hsl(220 15% 12%);
-    --glow-primary: 0 0 40px hsl(40 90% 55% / 0.15);
-    --glow-accent: 0 0 40px hsl(200 60% 45% / 0.15);
-
-    --sidebar-background: 220 20% 10%;
-    --sidebar-foreground: 45 10% 90%;
-    --sidebar-primary: 40 90% 55%;
-    --sidebar-primary-foreground: 220 25% 6%;
-    --sidebar-accent: 220 15% 16%;
-    --sidebar-accent-foreground: 45 10% 80%;
-    --sidebar-border: 220 15% 18%;
-    --sidebar-ring: 40 90% 55%;
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 160 100% 50%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 11%;
+    --sidebar-accent-foreground: 40 10% 65%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 160 100% 50%;
   }
 }
 
@@ -60,11 +56,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
   }
 }
 
@@ -75,24 +68,42 @@
   .font-body {
     font-family: var(--font-body);
   }
-  .text-gradient-primary {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(40 90% 55%), hsl(40 90% 70%));
-  }
-  .text-gradient-accent {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(200 60% 45%), hsl(200 60% 65%));
-  }
-  .bg-grid {
+
+  /* Mathematical coordinate grid */
+  .bg-coord-grid {
     background-image:
-      linear-gradient(var(--grid-color) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(hsl(0 0% 8%) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 8%) 1px, transparent 1px);
+    background-size: 60px 60px;
   }
+
+  /* Fine dot grid */
+  .bg-dot-grid {
+    background-image: radial-gradient(circle, hsl(0 0% 15%) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Axis lines */
+  .axis-x {
+    @apply absolute left-0 right-0 h-px;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 20%) 20%, hsl(0 0% 20%) 80%, transparent);
+  }
+  .axis-y {
+    @apply absolute top-0 bottom-0 w-px;
+    background: linear-gradient(180deg, transparent, hsl(0 0% 20%) 20%, hsl(0 0% 20%) 80%, transparent);
+  }
+
+  /* Glow effects */
   .glow-primary {
-    box-shadow: var(--glow-primary);
+    box-shadow: 0 0 30px hsl(160 100% 50% / 0.08);
   }
-  .glow-accent {
-    box-shadow: var(--glow-accent);
+  .glow-primary-strong {
+    box-shadow: 0 0 60px hsl(160 100% 50% / 0.12);
+  }
+
+  /* Text effects */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(160 100% 50%), hsl(160 80% 70%));
   }
 }
