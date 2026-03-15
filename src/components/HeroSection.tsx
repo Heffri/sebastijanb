@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-end pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="w-full"
       >
         <p className="font-display text-xs tracking-[0.2em] text-muted-foreground mb-6">
           Stockholm, Sweden
