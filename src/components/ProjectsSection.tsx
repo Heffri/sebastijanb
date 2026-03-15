@@ -47,18 +47,17 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-8">
+    <section id="projects" className="py-20 relative">
+      <div className="max-w-4xl mx-auto px-8">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex items-center gap-4 mb-14"
+          className="mb-10"
         >
-          <span className="font-display text-[10px] tracking-[0.4em] uppercase text-primary">02</span>
-          <div className="w-8 h-px bg-primary" />
-          <span className="font-display text-[10px] tracking-[0.4em] uppercase text-muted-foreground">Projects</span>
+          <h2 className="font-body text-2xl font-bold text-foreground">2. Projects</h2>
+          <div className="w-full h-px bg-border mt-2" />
         </motion.div>
 
         <div className="space-y-0">
@@ -72,25 +71,21 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="group block border-t border-border py-5 px-2 hover:bg-card/40 transition-all duration-300"
+              className="group block border-t border-border py-5 hover:bg-card/60 transition-all duration-300"
             >
-              <div className="grid md:grid-cols-12 gap-4 items-start">
-                <div className="md:col-span-1">
-                  <span className="font-display text-xs text-muted-foreground/40">{project.number}</span>
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+              <div className="flex flex-col md:flex-row md:items-start gap-3 md:gap-6">
+                <span className="font-display text-xs text-muted-foreground/50 md:w-8 shrink-0">{project.number}</span>
+                <div className="md:w-48 shrink-0">
+                  <h3 className="font-body text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
                 </div>
-                <div className="md:col-span-5">
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed font-light">
-                    {project.description}
-                  </p>
-                </div>
-                <div className="md:col-span-3 flex flex-wrap gap-1.5 md:justify-end">
+                <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1.5 md:justify-end shrink-0">
                   {project.tags.map((tag, j) => (
-                    <span key={j} className="font-display text-[10px] px-2 py-1 rounded-sm border border-border text-muted-foreground">
+                    <span key={j} className="font-display text-[10px] px-2 py-0.5 border border-border text-muted-foreground">
                       {tag}
                     </span>
                   ))}
@@ -105,7 +100,7 @@ const ProjectsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-8"
+          className="mt-6"
         >
           <a
             href="https://github.com/Heffri"

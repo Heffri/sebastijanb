@@ -7,7 +7,7 @@ import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background bg-dot-grid">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
       <AboutSection />
@@ -15,12 +15,9 @@ const Index = () => {
       <ExperienceSection />
       <ContactSection />
       <footer className="py-8 border-t border-border">
-        <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
-          <p className="font-display text-[10px] tracking-wider uppercase text-muted-foreground/50">
+        <div className="max-w-4xl mx-auto px-8 flex items-center justify-between">
+          <p className="font-display text-[10px] tracking-wider text-muted-foreground/50">
             © 2026 Sebastijan Babić
-          </p>
-          <p className="font-display text-[10px] tracking-wider uppercase text-muted-foreground/30">
-            φ = 1.618...
           </p>
         </div>
       </footer>
