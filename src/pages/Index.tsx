@@ -54,8 +54,6 @@ const Index = () => {
                 <p>FEniCSx, MPI</p>
                 <p>LaTeX, Git</p>
               </div>
-
-
             </div>
           </aside>
         </div>
