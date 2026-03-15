@@ -29,6 +29,8 @@ const skillGroups = [
   "Cross-validation",
   "Mixed-effects models",
   "Hypothesis testing",
+  "EDA",
+  "A/B testing",
   "FEM",
   "ODE/PDE solvers"]
 
