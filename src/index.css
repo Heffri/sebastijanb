@@ -79,7 +79,7 @@
 
   /* Fine dot grid */
   .bg-dot-grid {
-    background-image: radial-gradient(circle, hsl(0 0% 15%) 1px, transparent 1px);
+    background-image: radial-gradient(circle, hsl(0 0% 10%) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
