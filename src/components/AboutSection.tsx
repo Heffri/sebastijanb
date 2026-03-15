@@ -6,7 +6,7 @@ const skillGroups = [
   items: ["Python", "R", "SQL", "MATLAB"]
 },
 {
-  title: "Libraries",
+  title: "Libraries & Frameworks",
   items: [
   "NumPy",
   "SciPy",
@@ -14,11 +14,12 @@ const skillGroups = [
   "scikit-learn",
   "matplotlib",
   "seaborn",
+  "Plotly",
   "tidyverse",
   "ggplot2",
   "lme4",
-  "FEniCSx"]
-
+  "FEniCSx",
+  "Folium"]
 },
 {
   title: "Methods",
