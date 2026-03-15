@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-grid overflow-hidden">
-      {/* Floating math symbols */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {["∑", "∫", "∂", "σ", "μ", "π", "∇", "λ"].map((symbol, i) => (
           <motion.span
@@ -38,18 +37,18 @@ const HeroSection = () => {
           className="max-w-3xl"
         >
           <p className="font-display text-sm tracking-[0.3em] uppercase text-primary mb-6">
-            Data Science & Mathematical Statistics
+            Mathematical Statistics & Data Science
           </p>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-2">
+            <span className="text-foreground">Sebastijan</span>
+          </h1>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            <span className="text-foreground">Turning </span>
-            <span className="text-gradient-primary">data</span>
-            <br />
-            <span className="text-foreground">into </span>
-            <span className="text-gradient-accent">insight</span>
+            <span className="text-gradient-primary">Babić</span>
           </h1>
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
-            Student researcher exploring the intersection of statistical theory, 
-            machine learning, and real-world problem solving.
+            Third-year bachelor's student in Mathematics & Computer Science, 
+            specializing in mathematical statistics and data science. 
+            Passionate about finding structure in randomness.
           </p>
           <div className="flex gap-4">
             <a
@@ -67,7 +66,6 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Stats bar */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,10 +73,10 @@ const HeroSection = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl"
         >
           {[
-            { value: "12+", label: "Projects" },
-            { value: "4.0", label: "GPA" },
-            { value: "3", label: "Publications" },
-            { value: "Python", label: "Primary Lang" },
+            { value: "3rd Year", label: "B.Sc. Student" },
+            { value: "Math + CS", label: "Double Focus" },
+            { value: "Statistics", label: "Specialization" },
+            { value: "Python & R", label: "Primary Tools" },
           ].map((stat, i) => (
             <div key={i} className="text-center md:text-left">
               <p className="font-display text-2xl font-bold text-primary">{stat.value}</p>

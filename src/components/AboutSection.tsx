@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { category: "Statistics", items: ["Bayesian Inference", "Regression Analysis", "Time Series", "Hypothesis Testing"] },
-  { category: "Machine Learning", items: ["Neural Networks", "Random Forests", "SVM", "Clustering"] },
-  { category: "Tools", items: ["Python", "R", "SQL", "TensorFlow"] },
-  { category: "Visualization", items: ["Matplotlib", "Seaborn", "Plotly", "Tableau"] },
+  { category: "Statistics", items: ["Bayesian Inference", "Regression Analysis", "Probability Theory", "Hypothesis Testing"] },
+  { category: "Machine Learning", items: ["Supervised Learning", "Dimensionality Reduction", "Model Selection", "Cross-Validation"] },
+  { category: "Programming", items: ["Python", "R", "SQL", "MATLAB"] },
+  { category: "Tools & Viz", items: ["Pandas", "Scikit-learn", "Matplotlib", "LaTeX"] },
 ];
 
 const AboutSection = () => {
@@ -17,9 +17,9 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-display text-sm tracking-[0.3em] uppercase text-primary mb-3">About</p>
+          <p className="font-display text-sm tracking-[0.3em] uppercase text-primary mb-3">About Me</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
-            Skills & Expertise
+            Who I Am
           </h2>
         </motion.div>
 
@@ -31,13 +31,14 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="font-body text-muted-foreground leading-relaxed mb-6">
-              I'm a graduate student passionate about extracting meaningful patterns from complex datasets. 
-              My work bridges rigorous mathematical foundations with practical data science applications — 
-              from deriving theoretical convergence properties to building production ML pipelines.
+              Hi, I'm Sebastijan — a third-year undergraduate studying Mathematics and Computer Science 
+              with a focus on mathematical statistics and data science. I love the challenge of translating 
+              abstract mathematical concepts into practical tools that reveal patterns in real-world data.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              Currently focused on Bayesian methods for high-dimensional inference and their applications 
-              in computational biology and financial modeling.
+              My coursework spans probability theory, statistical inference, numerical methods, and 
+              machine learning. I'm especially drawn to the elegance of Bayesian thinking and how 
+              statistical theory can guide better decision-making under uncertainty.
             </p>
           </motion.div>
 
