@@ -20,13 +20,10 @@ const ContactSection = () => {
             about statistics and data science.
           </p>
           <div className="space-y-4 font-display text-sm">
-            <a href="mailto:student@example.com" className="block text-foreground hover:text-primary transition-colors">
-              → student@example.com
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="block text-foreground hover:text-primary transition-colors">
+            <a href="https://github.com/Heffri" target="_blank" rel="noopener noreferrer" className="block text-foreground hover:text-primary transition-colors">
               → GitHub
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="block text-foreground hover:text-primary transition-colors">
+            <a href="https://linkedin.com/in/sebastijanbabic" target="_blank" rel="noopener noreferrer" className="block text-foreground hover:text-primary transition-colors">
               → LinkedIn
             </a>
           </div>
