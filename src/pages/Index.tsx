@@ -54,11 +54,8 @@ const Index = () => {
                 <p>FEniCSx, MPI</p>
                 <p>LaTeX, Git</p>
               </div>
-              <div className="margin-note">
-                <p className="text-primary mb-1.5">§ eq</p>
-                <p className="italic font-body text-xs">∂u/∂t = α∆u</p>
-                <p className="italic font-body text-xs mt-1">b² − 4ac {'<'} 0</p>
-              </div>
+
+
             </div>
           </aside>
         </div>
