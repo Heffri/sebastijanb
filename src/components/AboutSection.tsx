@@ -6,16 +6,16 @@ const skillGroups = [
     items: ["Python", "R", "SQL", "MATLAB"],
   },
   {
-    title: "Libraries",
-    items: ["NumPy", "SciPy", "pandas", "scikit-learn", "matplotlib", "seaborn", "tidyverse", "ggplot2", "lme4", "FEniCSx"],
+    title: "Libraries & Frameworks",
+    items: ["NumPy", "SciPy", "pandas", "scikit-learn", "matplotlib", "seaborn", "folium", "tidyverse", "ggplot2", "lme4", "caret", "FEniCSx"],
   },
   {
     title: "Methods",
-    items: ["Regression", "Classification", "Cross-validation", "Mixed-effects models", "Hypothesis testing", "FEM", "ODE/PDE solvers"],
+    items: ["Regression", "Classification", "Cross-validation", "Mixed-effects models", "Hypothesis testing", "FEM", "ODE/PDE solvers", "Query optimisation"],
   },
   {
     title: "Tools",
-    items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "MPI", "Linux", "LaTeX"],
+    items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "MPI", "Linux", "Typst", "LaTeX"],
   },
 ];
 
@@ -28,15 +28,14 @@ const languages = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-28 relative">
+    <section id="about" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-8">
-        {/* Section label - asymmetric */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex items-center gap-4 mb-16"
+          className="flex items-center gap-4 mb-14"
         >
           <span className="font-display text-[10px] tracking-[0.4em] uppercase text-primary">01</span>
           <div className="w-8 h-px bg-primary" />
@@ -44,7 +43,6 @@ const AboutSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-12 gap-12">
-          {/* Left bio — 5 cols */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,17 +50,23 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
             className="md:col-span-5"
           >
-            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-8">
-              I'm a third-year undergraduate at Stockholm University studying Mathematics and Computer Science 
-              with a specialisation in mathematical statistics. My work sits at the intersection of rigorous 
-              statistical theory and practical computation — from deriving estimators to building ML pipelines.
+            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-6">
+              I'm finishing up a bachelor's at Stockholm University where I've spent most of my time 
+              on probability, inference, and numerical methods. The parts of maths I find most 
+              interesting are the ones that let you say something useful about noisy data — estimators, 
+              confidence intervals, model selection, that kind of thing.
+            </p>
+            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-6">
+              On the programming side I mostly work in Python and R. I've done projects ranging from 
+              mixed-effects modelling in R to finite element simulations with FEniCSx. Currently writing 
+              my thesis on stochastic modelling.
             </p>
             <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-10">
-              Currently writing my bachelor's thesis on stochastic modelling, while teaching cybersecurity 
-              fundamentals at Unga Forskare.
+              Outside of uni I teach cybersecurity and programming workshops to younger students at 
+              Unga Forskare — which is a surprisingly good way to check if you actually understand 
+              something.
             </p>
             
-            {/* Languages */}
             <div>
               <h3 className="font-display text-[10px] tracking-[0.3em] uppercase text-primary mb-4">Languages</h3>
               <div className="flex flex-wrap gap-x-6 gap-y-2">
@@ -75,7 +79,6 @@ const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Right skills — 7 cols, grid of skill groups */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
