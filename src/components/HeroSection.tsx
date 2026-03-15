@@ -23,7 +23,14 @@ const HeroSection = () => {
               Maths & CS student. Mathematical statistics, data science, numerical methods.
             </p>
 
-            <div className="flex gap-4 mt-10">
+            <div className="mt-8 px-4 py-3 rounded-sm border border-primary/30 bg-primary/5 inline-block">
+              <p className="font-display text-[10px] tracking-[0.3em] uppercase text-primary mb-1">Looking for</p>
+              <p className="font-body text-sm text-foreground/80 font-light">
+                Internships in data science, analytics, or quantitative research
+              </p>
+            </div>
+
+            <div className="flex gap-4 mt-8">
               <a
                 href="#projects"
                 className="px-5 py-2.5 rounded-sm bg-primary text-primary-foreground font-display text-[11px] tracking-wider uppercase hover:opacity-90 transition-opacity"
