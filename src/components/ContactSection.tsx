@@ -27,7 +27,7 @@ const ContactSection = () => {
 
         <div className="space-y-0 max-w-lg">
           {[
-            { label: "Email", href: "mailto:sebastijan.babic@proton.me", display: "sebastijan.babic@proton.me" },
+            { label: "Email", href: "mailto:sebastijan.sthlm@gmail.com", display: "sebastijan.sthlm@gmail.com" },
             { label: "GitHub", href: "https://github.com/Heffri", display: "github.com/Heffri" },
             { label: "LinkedIn", href: "https://linkedin.com/in/sebastijanbabic", display: "in/sebastijanbabic" },
           ].map((link, i) => (
