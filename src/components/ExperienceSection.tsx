@@ -60,12 +60,8 @@ const ExperienceSection = () => {
               <p className="font-body text-sm text-muted-foreground">Unga Forskare</p>
             </div>
 
-            <div className="mt-10 p-4 border border-border rounded-sm bg-card/30">
-              <p className="font-display text-[10px] tracking-[0.3em] uppercase text-primary mb-2">Looking for</p>
-              <p className="font-body text-sm text-muted-foreground font-light">
-                Internships in data science, analytics, or quantitative research.
-              </p>
-            </div>
+
+
           </motion.div>
         </div>
       </div>
