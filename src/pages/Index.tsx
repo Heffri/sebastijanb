@@ -10,10 +10,10 @@ const Index = () => {
     <div className="min-h-screen bg-background bg-dot-grid">
       <Navbar />
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr_180px] gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr_180px] gap-0">
           {/* Left margin column */}
-          <aside className="hidden lg:block border-r border-border/40 pr-5 pt-[85vh]">
-            <div className="sticky top-28 space-y-14">
+          <aside className="hidden lg:block border-r border-border/40 pr-5">
+            <div className="sticky top-28 space-y-14 pt-[40vh]">
               <div className="margin-note">
                 <p className="mb-1.5 text-primary">§ nav</p>
                 <a href="#about" className="block py-0.5 hover:text-primary transition-colors">About</a>
@@ -39,8 +39,8 @@ const Index = () => {
           </main>
 
           {/* Right margin column */}
-          <aside className="hidden lg:block border-l border-border/40 pl-5 pt-[85vh]">
-            <div className="sticky top-28 space-y-14">
+          <aside className="hidden lg:block border-l border-border/40 pl-5">
+            <div className="sticky top-28 space-y-14 pt-[40vh]">
               <div className="margin-note">
                 <p className="text-primary mb-1.5">§ status</p>
                 <p>Looking for</p>
