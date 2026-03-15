@@ -11,7 +11,7 @@ const skillGroups = [
   "NumPy",
   "SciPy",
   "pandas",
-  "scikit-learn",
+  
   "matplotlib",
   "seaborn",
   "Plotly",
