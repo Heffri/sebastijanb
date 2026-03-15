@@ -16,22 +16,17 @@ const ContactSection = () => {
           <span className="font-display text-[10px] tracking-[0.4em] uppercase text-muted-foreground">Contact</span>
         </motion.div>
 
-        <div className="grid md:grid-cols-12 gap-12">
+        <div className="grid md:grid-cols-12 gap-12 items-end">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-7"
+            className="md:col-span-5"
           >
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight mb-5">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight">
               Say hello.
             </h2>
-            <p className="font-body text-muted-foreground leading-relaxed font-light max-w-md">
-              I'm looking for internships and junior roles in data science, analytics, or 
-              quantitative research. Also happy to chat about stats, side projects, or anything 
-              where maths meets code.
-            </p>
           </motion.div>
 
           <motion.div
@@ -39,9 +34,9 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="md:col-span-5 flex flex-col justify-end"
+            className="md:col-span-7"
           >
-            <div className="space-y-4">
+            <div className="space-y-3">
               {[
                 { label: "Email", href: "mailto:sebastijan.babic@proton.me", display: "sebastijan.babic@proton.me" },
                 { label: "GitHub", href: "https://github.com/Heffri", display: "github.com/Heffri" },
@@ -54,12 +49,8 @@ const ContactSection = () => {
                   rel={link.label === "Email" ? undefined : "noopener noreferrer"}
                   className="group flex items-center justify-between py-3 border-b border-border hover:border-primary/30 transition-colors"
                 >
-                  <span className="font-display text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
-                    {link.label}
-                  </span>
-                  <span className="font-body text-sm text-foreground group-hover:text-primary transition-colors">
-                    {link.display}
-                  </span>
+                  <span className="font-display text-[10px] tracking-[0.2em] uppercase text-muted-foreground">{link.label}</span>
+                  <span className="font-body text-sm text-foreground group-hover:text-primary transition-colors">{link.display}</span>
                 </a>
               ))}
             </div>

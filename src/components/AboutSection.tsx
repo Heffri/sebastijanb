@@ -1,22 +1,10 @@
 import { motion } from "framer-motion";
 
 const skillGroups = [
-  {
-    title: "Languages",
-    items: ["Python", "R", "SQL", "MATLAB"],
-  },
-  {
-    title: "Libraries & Frameworks",
-    items: ["NumPy", "SciPy", "pandas", "scikit-learn", "matplotlib", "seaborn", "folium", "tidyverse", "ggplot2", "lme4", "caret", "FEniCSx"],
-  },
-  {
-    title: "Methods",
-    items: ["Regression", "Classification", "Cross-validation", "Mixed-effects models", "Hypothesis testing", "FEM", "ODE/PDE solvers", "Query optimisation"],
-  },
-  {
-    title: "Tools",
-    items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "MPI", "Linux", "Typst", "LaTeX"],
-  },
+  { title: "Languages", items: ["Python", "R", "SQL", "MATLAB"] },
+  { title: "Libraries", items: ["NumPy", "SciPy", "pandas", "scikit-learn", "matplotlib", "tidyverse", "ggplot2", "FEniCSx"] },
+  { title: "Methods", items: ["Regression", "Classification", "Cross-validation", "Mixed-effects", "Hypothesis testing", "FEM", "ODE/PDE solvers"] },
+  { title: "Tools", items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "MPI", "Linux", "LaTeX"] },
 ];
 
 const languages = [
@@ -50,21 +38,10 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
             className="md:col-span-5"
           >
-            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-6">
-              I'm finishing up a bachelor's at Stockholm University where I've spent most of my time 
-              on probability, inference, and numerical methods. The parts of maths I find most 
-              interesting are the ones that let you say something useful about noisy data — estimators, 
-              confidence intervals, model selection, that kind of thing.
-            </p>
-            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-6">
-              On the programming side I mostly work in Python and R. I've done projects ranging from 
-              mixed-effects modelling in R to finite element simulations with FEniCSx. Currently writing 
-              my thesis on stochastic modelling.
-            </p>
-            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-10">
-              Outside of uni I teach cybersecurity and programming workshops to younger students at 
-              Unga Forskare — which is a surprisingly good way to check if you actually understand 
-              something.
+            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-8">
+              Finishing a bachelor's at Stockholm University — mostly probability, inference, and 
+              numerical methods. Writing my thesis on stochastic modelling. Teaching cybersecurity 
+              workshops on the side.
             </p>
             
             <div>
