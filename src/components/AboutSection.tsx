@@ -1,10 +1,41 @@
 import { motion } from "framer-motion";
 
 const skillGroups = [
-  { title: "Languages", items: ["Python", "R", "SQL", "MATLAB"] },
-  { title: "Libraries", items: ["NumPy", "SciPy", "pandas", "scikit-learn", "matplotlib", "tidyverse", "ggplot2", "FEniCSx"] },
-  { title: "Methods", items: ["Regression", "Classification", "Cross-validation", "Mixed-effects", "Hypothesis testing", "FEM", "ODE/PDE solvers"] },
-  { title: "Tools", items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "MPI", "Linux", "LaTeX"] },
+  {
+    title: "Programming Languages",
+    items: ["Python", "R", "SQL", "MATLAB"],
+  },
+  {
+    title: "Libraries",
+    items: [
+      "NumPy",
+      "SciPy",
+      "pandas",
+      "scikit-learn",
+      "matplotlib",
+      "seaborn",
+      "tidyverse",
+      "ggplot2",
+      "lme4",
+      "FEniCSx",
+    ],
+  },
+  {
+    title: "Methods",
+    items: [
+      "Regression",
+      "Classification",
+      "Cross-validation",
+      "Mixed-effects models",
+      "Hypothesis testing",
+      "FEM",
+      "ODE/PDE solvers",
+    ],
+  },
+  {
+    title: "Tools",
+    items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "MPI", "Linux", "LaTeX"],
+  },
 ];
 
 const languages = [
@@ -16,66 +47,83 @@ const languages = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 relative">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="mb-12"
-      >
-        <div className="flex items-baseline gap-4">
-          <span className="font-display text-xs text-primary">01</span>
-          <h2 className="font-body text-3xl font-bold text-foreground">About</h2>
-        </div>
-        <div className="w-full h-px bg-border mt-4" />
-      </motion.div>
+    <section id="about" className="py-28 relative">
+      <div className="max-w-7xl mx-auto px-8">
+        {/* Section label - asymmetric */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center gap-4 mb-16"
+        >
+          <span className="font-display text-[10px] tracking-[0.4em] uppercase text-primary">01</span>
+          <div className="w-8 h-px bg-primary" />
+          <span className="font-display text-[10px] tracking-[0.4em] uppercase text-muted-foreground">About</span>
+        </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <p className="font-body text-lg text-foreground/80 leading-[1.9] mb-12 max-w-2xl">
-          Finishing a bachelor's at Stockholm University — mostly probability, inference, and
-          numerical methods. Writing my thesis on stochastic modelling. Teaching cybersecurity
-          workshops on the side.
-        </p>
+        <div className="grid md:grid-cols-12 gap-12">
+          {/* Left bio — 5 cols */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="md:col-span-5"
+          >
+            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-8">
+              I'm a third-year undergraduate at Stockholm University studying Mathematics and Computer Science with a
+              specialisation in mathematical statistics. My work sits at the intersection of rigorous statistical theory
+              and practical computation — from deriving estimators to building ML pipelines.
+            </p>
+            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-10">
+              Currently writing my bachelor's thesis on stochastic modelling, while teaching cybersecurity fundamentals
+              at Unga Forskare.
+            </p>
 
-        <div className="mb-12">
-          <h3 className="font-display text-xs tracking-[0.2em] uppercase text-primary mb-4">Languages</h3>
-          <div className="w-12 h-px bg-primary/20 mb-4" />
-          <div className="flex flex-wrap gap-x-8 gap-y-2">
-            {languages.map((l, i) => (
-              <span key={i} className="font-body text-base text-foreground/70">
-                {l.lang} <span className="text-primary font-display text-sm">{l.level}</span>
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-x-12 gap-y-10">
-          {skillGroups.map((group, i) => (
-            <div key={i}>
-              <h3 className="font-display text-xs tracking-[0.2em] uppercase text-primary mb-3">
-                {group.title}
-              </h3>
-              <div className="w-12 h-px bg-primary/20 mb-4" />
-              <div className="flex flex-wrap gap-2">
-                {group.items.map((item, j) => (
-                  <span
-                    key={j}
-                    className="font-display text-sm px-3 py-1.5 bg-secondary text-secondary-foreground border border-border"
-                  >
-                    {item}
+            {/* Languages */}
+            <div>
+              <h3 className="font-display text-[10px] tracking-[0.3em] uppercase text-primary mb-4">Languages</h3>
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                {languages.map((l, i) => (
+                  <span key={i} className="font-body text-sm text-muted-foreground">
+                    {l.lang} <span className="text-primary/60 font-display text-xs">{l.level}</span>
                   </span>
                 ))}
               </div>
             </div>
-          ))}
+          </motion.div>
+
+          {/* Right skills — 7 cols, grid of skill groups */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="md:col-span-7"
+          >
+            <div className="grid grid-cols-2 gap-x-10 gap-y-8">
+              {skillGroups.map((group, i) => (
+                <div key={i}>
+                  <h3 className="font-display text-[10px] tracking-[0.3em] uppercase text-primary mb-4">
+                    {group.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {group.items.map((item, j) => (
+                      <span
+                        key={j}
+                        className="font-body text-xs px-2.5 py-1 rounded-sm bg-secondary text-secondary-foreground border border-border"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
