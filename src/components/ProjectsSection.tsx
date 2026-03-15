@@ -41,16 +41,19 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-24 relative">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="mb-10"
+        className="mb-12"
       >
-        <h2 className="font-body text-3xl font-bold text-foreground">2. Projects</h2>
-        <div className="w-full h-px bg-border mt-3" />
+        <div className="flex items-baseline gap-4">
+          <span className="font-display text-xs text-primary">02</span>
+          <h2 className="font-body text-3xl font-bold text-foreground">Projects</h2>
+        </div>
+        <div className="w-full h-px bg-border mt-4" />
       </motion.div>
 
       <div className="space-y-0">
@@ -64,7 +67,7 @@ const ProjectsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.06 }}
-            className="group block border-t border-border py-6 hover:bg-card/50 transition-all duration-300"
+            className="group block border-t border-border/60 py-6 hover:bg-card/40 transition-all duration-300 px-1"
           >
             <div className="flex flex-col gap-2">
               <div className="flex items-start justify-between gap-4">
@@ -85,14 +88,14 @@ const ProjectsSection = () => {
             </div>
           </motion.a>
         ))}
-        <div className="border-t border-border" />
+        <div className="border-t border-border/60" />
       </div>
 
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="mt-6"
+        className="mt-8"
       >
         <a
           href="https://github.com/Heffri"

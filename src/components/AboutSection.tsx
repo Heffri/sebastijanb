@@ -16,16 +16,19 @@ const languages = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="py-24 relative">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="mb-10"
+        className="mb-12"
       >
-        <h2 className="font-body text-3xl font-bold text-foreground">1. About</h2>
-        <div className="w-full h-px bg-border mt-3" />
+        <div className="flex items-baseline gap-4">
+          <span className="font-display text-xs text-primary">01</span>
+          <h2 className="font-body text-3xl font-bold text-foreground">About</h2>
+        </div>
+        <div className="w-full h-px bg-border mt-4" />
       </motion.div>
 
       <motion.div
@@ -34,14 +37,15 @@ const AboutSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="font-body text-lg text-foreground/80 leading-[1.9] mb-10 max-w-2xl">
+        <p className="font-body text-lg text-foreground/80 leading-[1.9] mb-12 max-w-2xl">
           Finishing a bachelor's at Stockholm University — mostly probability, inference, and
           numerical methods. Writing my thesis on stochastic modelling. Teaching cybersecurity
           workshops on the side.
         </p>
 
-        <div className="mb-10">
+        <div className="mb-12">
           <h3 className="font-display text-xs tracking-[0.2em] uppercase text-primary mb-4">Languages</h3>
+          <div className="w-12 h-px bg-primary/20 mb-4" />
           <div className="flex flex-wrap gap-x-8 gap-y-2">
             {languages.map((l, i) => (
               <span key={i} className="font-body text-base text-foreground/70">
@@ -54,9 +58,10 @@ const AboutSection = () => {
         <div className="grid grid-cols-2 gap-x-12 gap-y-10">
           {skillGroups.map((group, i) => (
             <div key={i}>
-              <h3 className="font-display text-xs tracking-[0.2em] uppercase text-primary mb-4">
+              <h3 className="font-display text-xs tracking-[0.2em] uppercase text-primary mb-3">
                 {group.title}
               </h3>
+              <div className="w-12 h-px bg-primary/20 mb-4" />
               <div className="flex flex-wrap gap-2">
                 {group.items.map((item, j) => (
                   <span
