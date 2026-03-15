@@ -53,7 +53,7 @@ const ProjectsSection = () => {
           <span className="font-display text-xs text-primary">02</span>
           <h2 className="font-body text-3xl font-bold text-foreground">Projects</h2>
         </div>
-        <div className="w-full h-px bg-border mt-4" />
+        
       </motion.div>
 
       <div className="space-y-0">
