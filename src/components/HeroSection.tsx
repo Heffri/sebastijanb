@@ -19,10 +19,8 @@ const HeroSection = () => {
               Sebastijan Babić
             </h1>
 
-            <p className="font-body text-base md:text-lg text-muted-foreground max-w-lg leading-relaxed font-light">
-              Maths & CS student wrapping up a bachelor's in mathematical statistics. 
-              I like building things that sit somewhere between rigorous theory and messy real-world data — 
-              regression models, numerical solvers, the occasional heatmap.
+            <p className="font-body text-base md:text-lg text-muted-foreground max-w-md leading-relaxed font-light">
+              Maths & CS student. Mathematical statistics, data science, numerical methods.
             </p>
 
             <div className="flex gap-4 mt-10">
@@ -30,13 +28,13 @@ const HeroSection = () => {
                 href="#projects"
                 className="px-5 py-2.5 rounded-sm bg-primary text-primary-foreground font-display text-[11px] tracking-wider uppercase hover:opacity-90 transition-opacity"
               >
-                See my work
+                Projects
               </a>
               <a
                 href="#contact"
                 className="px-5 py-2.5 rounded-sm border border-border text-muted-foreground font-display text-[11px] tracking-wider uppercase hover:text-foreground hover:border-muted-foreground transition-colors"
               >
-                Get in touch
+                Contact
               </a>
             </div>
           </motion.div>
@@ -49,9 +47,7 @@ const HeroSection = () => {
           >
             <div className="font-display text-[10px] text-muted-foreground/30 leading-loose text-right">
               <p>B.Sc. Mathematics & CS</p>
-              <p>Stockholm University</p>
-              <p>Class of 2026</p>
-              <p className="mt-4 text-primary/40">σ² = E[X²] − (E[X])²</p>
+              <p>Stockholm University, 2026</p>
             </div>
           </motion.div>
         </div>
