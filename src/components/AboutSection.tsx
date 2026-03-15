@@ -6,7 +6,7 @@ const skillGroups = [
   items: ["Python", "R", "SQL", "MATLAB"]
 },
 {
-  title: "Libraries",
+  title: "Libraries & Frameworks",
   items: [
   "NumPy",
   "SciPy",
@@ -14,11 +14,12 @@ const skillGroups = [
   "scikit-learn",
   "matplotlib",
   "seaborn",
+  "Plotly",
   "tidyverse",
   "ggplot2",
   "lme4",
-  "FEniCSx"]
-
+  "FEniCSx",
+  "Folium"]
 },
 {
   title: "Methods",
@@ -28,13 +29,15 @@ const skillGroups = [
   "Cross-validation",
   "Mixed-effects models",
   "Hypothesis testing",
+  "EDA",
+  "A/B testing",
   "FEM",
   "ODE/PDE solvers"]
 
 },
 {
   title: "Tools",
-  items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "Linux", "LaTeX"]
+  items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "Excel", "Linux", "Typst"]
 }];
 
 
