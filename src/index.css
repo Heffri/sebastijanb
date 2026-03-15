@@ -7,7 +7,7 @@
 @layer base {
   :root {
     --background: 0 0% 4%;
-    --foreground: 40 20% 92%;
+    --foreground: 40 15% 96%;
 
     --card: 0 0% 7%;
     --card-foreground: 40 20% 92%;
@@ -22,7 +22,7 @@
     --secondary-foreground: 40 10% 65%;
 
     --muted: 0 0% 11%;
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 0 0% 55%;
 
     --accent: 160 60% 35%;
     --accent-foreground: 40 20% 92%;
@@ -79,7 +79,7 @@
 
   /* Fine dot grid */
   .bg-dot-grid {
-    background-image: radial-gradient(circle, hsl(0 0% 15%) 1px, transparent 1px);
+    background-image: radial-gradient(circle, hsl(0 0% 10%) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
