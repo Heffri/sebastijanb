@@ -2,101 +2,130 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Supervised Statistical Learning",
+    tags: ["R", "Regression", "Mixed-Effects"],
+    description: "Two R projects: predicting computer prices with log-linear regression, backward AIC, LOOCV, Cook's distance, and VIF diagnostics; and modelling mussel stress-protein response with hierarchical mixed-effects models.",
+    link: "https://github.com/Heffri/supervised-learning",
+    number: "01",
+  },
+  {
     title: "Traffic Incidents USA",
-    tags: ["Jupyter", "Pandas", "Seaborn", "Folium"],
-    description: "Exploratory analysis of US traffic accidents (2017–2019) with geographic heatmaps and statistical breakdowns of accident rates by traffic signal type, including NYC vs. LA comparisons.",
+    tags: ["Python", "Pandas", "Folium"],
+    description: "Analysis of ~191,000 US traffic accidents (2017–2019) studying geographic patterns and signal–accident correlations. Built interactive folium heatmaps and NYC vs. LA comparative visualisations.",
     link: "https://github.com/Heffri/traffic-incidents-USA",
+    number: "02",
   },
   {
-    title: "Population Dynamics Simulation",
-    tags: ["Python", "ODEs", "Numerical Methods"],
-    description: "Lotka-Volterra predator-prey models (2- and 3-species) solved with a hand-written Forward Euler and RK45. Demonstrated +295% plant yield improvement via biological control agents.",
+    title: "Population Dynamics",
+    tags: ["Python", "ODEs", "Numerical"],
+    description: "Forward Euler and RK45 solvers for 2- and 3-species Lotka-Volterra systems. Demonstrated +295% plant yield via biological control in plant-pest-predator simulations.",
     link: "https://github.com/Heffri/population-dynamics",
+    number: "03",
   },
   {
-    title: "Glacier Flow Simulation",
-    tags: ["Python", "FEniCSx", "FEM", "MPI"],
-    description: "Finite element solver for glacier dynamics using the shallow ice approximation on real Arolla glacier geometry. Built with FEniCSx and parallelised via MPI.",
+    title: "Glacier Ice Flow",
+    tags: ["FEniCSx", "FEM", "MPI"],
+    description: "Finite element solver for glacier Stokes equations on real Arolla glacier geometry. Variational formulation in UFL with MPI-parallelised computation via dolfinx.",
     link: "https://github.com/Heffri/glacier-flow-simulation",
-  },
-  {
-    title: "DNA Sequence Analysis",
-    tags: ["Python", "Biopython", "Bioinformatics"],
-    description: "Computational analysis of DNA sequences including the SARS-CoV-2 reference genome. Implements sequence parsing, statistics, and lays groundwork for alignment algorithms.",
-    link: "https://github.com/Heffri/dna-sequence-analysis",
+    number: "04",
   },
   {
     title: "Database Technology",
-    tags: ["SQL", "Python", "SQLite", "MariaDB"],
-    description: "Three database projects: protein database queries, human genome analysis on Ensembl (discovering Titin's 365 exons), and Swedish butterfly observations with index performance benchmarking.",
+    tags: ["SQL", "Python", "SQLite"],
+    description: "Human genome analysis on Ensembl with multi-table JOINs and EXPLAIN query-plan analysis. Python + SQLite butterfly observation app with index performance benchmarking.",
     link: "https://github.com/Heffri/database-technology",
+    number: "05",
   },
   {
-    title: "Supervised Learning",
-    tags: ["R", "Machine Learning", "Statistics"],
-    description: "Supervised learning methods implemented in R — classification and regression techniques with model evaluation and cross-validation.",
-    link: "https://github.com/Heffri/supervised-learning",
+    title: "DNA Sequence Analysis",
+    tags: ["Python", "Biopython"],
+    description: "Computational analysis of DNA sequences including the SARS-CoV-2 reference genome. Sequence parsing, statistics, and groundwork for alignment algorithms.",
+    link: "https://github.com/Heffri/dna-sequence-analysis",
+    number: "06",
   },
 ];
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 relative">
-      <div className="container px-6">
+    <section id="projects" className="py-28 relative">
+      <div className="max-w-7xl mx-auto px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center gap-4 mb-16"
         >
-          <p className="font-display text-sm tracking-[0.3em] uppercase text-primary mb-3">Work</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Featured Projects
-          </h2>
-          <p className="font-body text-muted-foreground mb-12 max-w-xl">
-            A selection of academic and personal projects spanning data analysis, numerical simulation, 
-            and machine learning. All source code available on{" "}
-            <a href="https://github.com/Heffri" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-              GitHub
-            </a>.
-          </p>
+          <span className="font-display text-[10px] tracking-[0.4em] uppercase text-primary">02</span>
+          <div className="w-8 h-px bg-primary" />
+          <span className="font-display text-[10px] tracking-[0.4em] uppercase text-muted-foreground">Projects</span>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="space-y-1">
           {projects.map((project, i) => (
             <motion.a
               key={i}
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group block p-6 rounded-lg bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:glow-primary"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="group block border-t border-border py-7 px-2 hover:bg-card/60 transition-all duration-300"
             >
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag, j) => (
-                  <span
-                    key={j}
-                    className="font-display text-xs px-2 py-1 rounded bg-secondary text-secondary-foreground"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <div className="grid md:grid-cols-12 gap-4 items-start">
+                {/* Number */}
+                <div className="md:col-span-1">
+                  <span className="font-display text-xs text-muted-foreground/40">{project.number}</span>
+                </div>
+
+                {/* Title */}
+                <div className="md:col-span-3">
+                  <h3 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                </div>
+
+                {/* Description */}
+                <div className="md:col-span-5">
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed font-light">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Tags */}
+                <div className="md:col-span-3 flex flex-wrap gap-1.5 md:justify-end">
+                  {project.tags.map((tag, j) => (
+                    <span
+                      key={j}
+                      className="font-display text-[10px] px-2 py-1 rounded-sm border border-border text-muted-foreground"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h3 className="font-display text-base font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {project.title}
-              </h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                {project.description}
-              </p>
-              <span className="inline-block mt-4 font-display text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                View on GitHub →
-              </span>
             </motion.a>
           ))}
+          <div className="border-t border-border" />
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-8"
+        >
+          <a
+            href="https://github.com/Heffri"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-display text-[11px] tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors"
+          >
+            View all on GitHub →
+          </a>
+        </motion.div>
       </div>
     </section>
   );
