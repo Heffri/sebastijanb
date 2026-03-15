@@ -88,7 +88,7 @@ const ProjectsSection = () => {
             </div>
           </motion.a>
         ))}
-        <div className="border-t border-border/60" />
+        
       </div>
 
       <motion.div
