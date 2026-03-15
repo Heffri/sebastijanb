@@ -76,7 +76,7 @@ const Index = () => {
                 <p className="text-primary font-bold mb-2">§ tools</p>
                 <div className="w-6 h-px bg-primary/30 mb-2" />
                 <p>Python, R, SQL</p>
-                <p>pandas, scikit-learn</p>
+                <p>pandas, SciPy</p>
                 <p>Jupyter, Git</p>
               </div>
             </div>
