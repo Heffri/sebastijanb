@@ -16,74 +16,62 @@ const languages = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-8">
+    <section id="about" className="py-20 relative">
+      <div className="max-w-4xl mx-auto px-8">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex items-center gap-4 mb-14"
+          className="mb-10"
         >
-          <span className="font-display text-[10px] tracking-[0.4em] uppercase text-primary">01</span>
-          <div className="w-8 h-px bg-primary" />
-          <span className="font-display text-[10px] tracking-[0.4em] uppercase text-muted-foreground">About</span>
+          <h2 className="font-body text-2xl font-bold text-foreground">1. About</h2>
+          <div className="w-full h-px bg-border mt-2" />
         </motion.div>
 
-        <div className="grid md:grid-cols-12 gap-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="md:col-span-5"
-          >
-            <p className="font-body text-muted-foreground leading-[1.8] text-[15px] font-light mb-8">
-              Finishing a bachelor's at Stockholm University — mostly probability, inference, and 
-              numerical methods. Writing my thesis on stochastic modelling. Teaching cybersecurity 
-              workshops on the side.
-            </p>
-            
-            <div>
-              <h3 className="font-display text-[10px] tracking-[0.3em] uppercase text-primary mb-4">Languages</h3>
-              <div className="flex flex-wrap gap-x-6 gap-y-2">
-                {languages.map((l, i) => (
-                  <span key={i} className="font-body text-sm text-muted-foreground">
-                    {l.lang} <span className="text-primary/60 font-display text-xs">{l.level}</span>
-                  </span>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="font-body text-base text-foreground/80 leading-[1.9] mb-8 max-w-2xl">
+            Finishing a bachelor's at Stockholm University — mostly probability, inference, and
+            numerical methods. Writing my thesis on stochastic modelling. Teaching cybersecurity
+            workshops on the side.
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="md:col-span-7"
-          >
-            <div className="grid grid-cols-2 gap-x-10 gap-y-8">
-              {skillGroups.map((group, i) => (
-                <div key={i}>
-                  <h3 className="font-display text-[10px] tracking-[0.3em] uppercase text-primary mb-4">
-                    {group.title}
-                  </h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {group.items.map((item, j) => (
-                      <span
-                        key={j}
-                        className="font-body text-xs px-2.5 py-1 rounded-sm bg-secondary text-secondary-foreground border border-border"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+          <div className="mb-10">
+            <h3 className="font-display text-[11px] tracking-[0.2em] uppercase text-primary mb-3">Languages</h3>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {languages.map((l, i) => (
+                <span key={i} className="font-body text-sm text-foreground/70">
+                  {l.lang} <span className="text-primary font-display text-xs">{l.level}</span>
+                </span>
               ))}
             </div>
-          </motion.div>
-        </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-x-10 gap-y-8">
+            {skillGroups.map((group, i) => (
+              <div key={i}>
+                <h3 className="font-display text-[11px] tracking-[0.2em] uppercase text-primary mb-3">
+                  {group.title}
+                </h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {group.items.map((item, j) => (
+                    <span
+                      key={j}
+                      className="font-display text-xs px-2.5 py-1 bg-secondary text-secondary-foreground border border-border"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
