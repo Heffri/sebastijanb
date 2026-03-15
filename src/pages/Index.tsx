@@ -8,44 +8,31 @@ import ContactSection from "@/components/ContactSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background bg-dot-grid scroll-smooth">
-      <Navbar />
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr_180px] gap-0">
           {/* Left margin column */}
           <aside className="hidden lg:block border-r border-border/40 pr-5">
-            <div className="sticky top-28 space-y-12 pt-[40vh]" />
+            <div className="sticky top-28 space-y-12 pt-[40vh]">
+              <div className="margin-note">
+                <p className="mb-2 text-primary font-bold">§ nav</p>
+                <div className="w-6 h-px bg-primary/30 mb-2" />
+                <a href="#about" className="block py-0.5 hover:text-primary transition-colors">About</a>
+                <a href="#projects" className="block py-0.5 hover:text-primary transition-colors">Projects</a>
+                <a href="#experience" className="block py-0.5 hover:text-primary transition-colors">Experience</a>
+                <a href="#contact" className="block py-0.5 hover:text-primary transition-colors">Contact</a>
+              </div>
+              <div className="margin-note">
+                <p className="text-primary font-bold mb-2">§ ref</p>
+                <div className="w-6 h-px bg-primary/30 mb-2" />
+                <p>Stockholm Univ.</p>
+                <p>2023–2026</p>
+              </div>
+            </div>
           </aside>
 
           {/* Main content column */}
           <main className="md:px-12 lg:px-16 min-w-0">
-            {/* Margin notes inline at top */}
-            <div className="flex flex-wrap gap-x-10 gap-y-4 pt-28 pb-4">
-              <div className="margin-note">
-                <p className="mb-1 text-primary font-bold">§ nav</p>
-                <div className="w-6 h-px bg-primary/30 mb-1" />
-                <div className="flex gap-3">
-                  <a href="#about" className="hover:text-primary transition-colors">About</a>
-                  <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-                  <a href="#experience" className="hover:text-primary transition-colors">Experience</a>
-                  <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
-                </div>
-              </div>
-              <div className="margin-note">
-                <p className="text-primary font-bold mb-1">§ ref</p>
-                <div className="w-6 h-px bg-primary/30 mb-1" />
-                <p>Stockholm Univ. · 2023–2026</p>
-              </div>
-              <div className="margin-note">
-                <p className="text-primary font-bold mb-1">§ status</p>
-                <div className="w-6 h-px bg-primary/30 mb-1" />
-                <p>Seeking data science & analytics internships</p>
-              </div>
-              <div className="margin-note">
-                <p className="text-primary font-bold mb-1">§ tools</p>
-                <div className="w-6 h-px bg-primary/30 mb-1" />
-                <p>Python, R, SQL, LaTeX, Git</p>
-              </div>
-            </div>
+            <Navbar />
 
             <HeroSection />
             <div className="w-full flex items-center gap-4 py-2">
@@ -76,7 +63,22 @@ const Index = () => {
 
           {/* Right margin column */}
           <aside className="hidden lg:block border-l border-border/40 pl-5">
-            <div className="sticky top-28 space-y-12 pt-[40vh]" />
+            <div className="sticky top-28 space-y-12 pt-[40vh]">
+              <div className="margin-note">
+                <p className="text-primary font-bold mb-2">§ status</p>
+                <div className="w-6 h-px bg-primary/30 mb-2" />
+                <p>Looking for</p>
+                <p>internships in</p>
+                <p>data science &</p>
+                <p>analytics</p>
+              </div>
+              <div className="margin-note">
+                <p className="text-primary font-bold mb-2">§ tools</p>
+                <div className="w-6 h-px bg-primary/30 mb-2" />
+                <p>Python, R, SQL</p>
+                <p>LaTeX, Git</p>
+              </div>
+            </div>
           </aside>
         </div>
       </div>

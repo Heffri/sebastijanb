@@ -19,7 +19,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/90 backdrop-blur-lg border-b border-border/60" : ""}`}>
+    <nav className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/90 backdrop-blur-lg border-b border-border/60" : ""}`}>
       <div className="max-w-[1400px] mx-auto px-10 flex items-center justify-between h-16">
         <a href="#" className="font-display text-xs font-bold text-primary tracking-[0.2em]">
           S.B
