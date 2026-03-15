@@ -37,7 +37,7 @@ const skillGroups = [
 },
 {
   title: "Tools",
-  items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "Linux", "LaTeX"]
+  items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "Excel", "Linux", "Typst"]
 }];
 
 
