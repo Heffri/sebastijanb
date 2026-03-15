@@ -23,7 +23,7 @@ const ContactSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="font-body text-xl text-foreground/70 italic mb-10">Say hello.</p>
+        <p className="font-body text-xl text-foreground/70 italic mb-10">Contact me here.</p>
 
         <div className="space-y-0 max-w-lg">
           {[
@@ -38,8 +38,12 @@ const ContactSection = () => {
               rel={link.label === "Email" ? undefined : "noopener noreferrer"}
               className="group flex items-center justify-between py-4 border-b border-border/60 hover:border-primary/40 transition-colors"
             >
-              <span className="font-display text-[11px] tracking-[0.2em] uppercase text-muted-foreground">{link.label}</span>
-              <span className="font-body text-base text-foreground group-hover:text-primary transition-colors">{link.display}</span>
+              <span className="font-display text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
+                {link.label}
+              </span>
+              <span className="font-body text-base text-foreground group-hover:text-primary transition-colors">
+                {link.display}
+              </span>
             </a>
           ))}
         </div>
