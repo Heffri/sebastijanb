@@ -2,40 +2,40 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Bayesian Neural Networks for Uncertainty Quantification",
-    tags: ["PyTorch", "Bayesian ML", "Research"],
-    description: "Implemented variational inference methods for deep learning models to provide calibrated uncertainty estimates in medical image classification.",
-    link: "#",
+    title: "Traffic Incidents USA",
+    tags: ["Jupyter", "Pandas", "Seaborn", "Folium"],
+    description: "Exploratory analysis of US traffic accidents (2017–2019) with geographic heatmaps and statistical breakdowns of accident rates by traffic signal type, including NYC vs. LA comparisons.",
+    link: "https://github.com/Heffri/traffic-incidents-USA",
   },
   {
-    title: "Time Series Forecasting with ARIMA-GARCH",
-    tags: ["R", "Finance", "Statistics"],
-    description: "Built a hybrid model for volatility forecasting on cryptocurrency markets, achieving 15% improvement over baseline GARCH models.",
-    link: "#",
+    title: "Population Dynamics Simulation",
+    tags: ["Python", "ODEs", "Numerical Methods"],
+    description: "Lotka-Volterra predator-prey models (2- and 3-species) solved with a hand-written Forward Euler and RK45. Demonstrated +295% plant yield improvement via biological control agents.",
+    link: "https://github.com/Heffri/population-dynamics",
   },
   {
-    title: "Causal Inference in A/B Testing",
-    tags: ["Python", "Causal ML", "Statistics"],
-    description: "Developed a framework for estimating heterogeneous treatment effects using doubly-robust estimators on large-scale experimental data.",
-    link: "#",
+    title: "Glacier Flow Simulation",
+    tags: ["Python", "FEniCSx", "FEM", "MPI"],
+    description: "Finite element solver for glacier dynamics using the shallow ice approximation on real Arolla glacier geometry. Built with FEniCSx and parallelised via MPI.",
+    link: "https://github.com/Heffri/glacier-flow-simulation",
   },
   {
-    title: "High-Dimensional PCA for Genomic Data",
-    tags: ["R", "Bioinformatics", "Linear Algebra"],
-    description: "Applied random matrix theory to determine optimal dimensionality reduction thresholds for gene expression datasets with n << p.",
-    link: "#",
+    title: "DNA Sequence Analysis",
+    tags: ["Python", "Biopython", "Bioinformatics"],
+    description: "Computational analysis of DNA sequences including the SARS-CoV-2 reference genome. Implements sequence parsing, statistics, and lays groundwork for alignment algorithms.",
+    link: "https://github.com/Heffri/dna-sequence-analysis",
   },
   {
-    title: "Reinforcement Learning for Portfolio Optimization",
-    tags: ["Python", "RL", "Finance"],
-    description: "Trained a PPO agent to manage a multi-asset portfolio, incorporating Markowitz constraints and transaction cost modeling.",
-    link: "#",
+    title: "Database Technology",
+    tags: ["SQL", "Python", "SQLite", "MariaDB"],
+    description: "Three database projects: protein database queries, human genome analysis on Ensembl (discovering Titin's 365 exons), and Swedish butterfly observations with index performance benchmarking.",
+    link: "https://github.com/Heffri/database-technology",
   },
   {
-    title: "Spatial Statistics Dashboard",
-    tags: ["Python", "Plotly", "Geostatistics"],
-    description: "Interactive visualization of spatial autocorrelation in urban crime data using Moran's I and kriging interpolation.",
-    link: "#",
+    title: "Supervised Learning",
+    tags: ["R", "Machine Learning", "Statistics"],
+    description: "Supervised learning methods implemented in R — classification and regression techniques with model evaluation and cross-validation.",
+    link: "https://github.com/Heffri/supervised-learning",
   },
 ];
 
@@ -50,9 +50,16 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="font-display text-sm tracking-[0.3em] uppercase text-primary mb-3">Work</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Featured Projects
           </h2>
+          <p className="font-body text-muted-foreground mb-12 max-w-xl">
+            A selection of academic and personal projects spanning data analysis, numerical simulation, 
+            and machine learning. All source code available on{" "}
+            <a href="https://github.com/Heffri" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              GitHub
+            </a>.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -60,6 +67,8 @@ const ProjectsSection = () => {
             <motion.a
               key={i}
               href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -82,6 +91,9 @@ const ProjectsSection = () => {
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 {project.description}
               </p>
+              <span className="inline-block mt-4 font-display text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                View on GitHub →
+              </span>
             </motion.a>
           ))}
         </div>
