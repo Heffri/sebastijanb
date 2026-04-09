@@ -4,8 +4,10 @@ import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
+import { useVisitTracker } from "@/hooks/useVisitTracker";
 
 const Index = () => {
+  useVisitTracker();
   return (
     <div className="min-h-screen bg-background bg-dot-grid scroll-smooth">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
