@@ -16,7 +16,7 @@ Deno.serve(async (req) => {
     const password = url.searchParams.get("password") || req.headers.get("x-analytics-password");
     const expectedPassword = Deno.env.get("ANALYTICS_PASSWORD");
 
-    console.log("Password received:", !!password, "Expected set:", !!expectedPassword, "Match:", password === expectedPassword);
+    console.log("Pwd len:", password?.length, "Expected len:", expectedPassword?.length, "Pwd first3:", password?.slice(0,3), "Exp first3:", expectedPassword?.slice(0,3));
 
     if (!expectedPassword) {
       console.error("ANALYTICS_PASSWORD secret is not configured");
