@@ -16,6 +16,16 @@ Deno.serve(async (req) => {
     const password = url.searchParams.get("password") || req.headers.get("x-analytics-password");
     const expectedPassword = Deno.env.get("ANALYTICS_PASSWORD");
 
+    console.log("Password received:", !!password, "Expected set:", !!expectedPassword, "Match:", password === expectedPassword);
+
+    if (!expectedPassword) {
+      console.error("ANALYTICS_PASSWORD secret is not configured");
+      return new Response(JSON.stringify({ error: "Server configuration error" }), {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     if (!password || password !== expectedPassword) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
         status: 401,
