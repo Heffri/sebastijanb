@@ -9,40 +9,40 @@ type Project = {
 
 const categories: { name: string; projects: Project[] }[] = [
   {
-    name: "Statistics & Machine Learning",
+    name: "Statistics & ML",
     projects: [
       {
-        title: "Supervised Statistical Learning",
-        tags: ["R", "Regression", "Mixed-Effects"],
-        description: "Log-linear regression with AIC/LOOCV diagnostics; hierarchical mixed-effects models with likelihood-ratio testing.",
+        title: "Supervised Learning",
+        tags: ["R", "Regression"],
+        description: "Log-linear regression, AIC/LOOCV, mixed-effects models.",
         link: "https://github.com/Heffri/supervised-learning",
       },
     ],
   },
   {
-    name: "Data Analysis & Visualization",
+    name: "Data & Visualization",
     projects: [
       {
         title: "US Traffic Incidents",
-        tags: ["Python", "Pandas", "Folium"],
-        description: "~191k accident records. Interactive heatmaps, signal–accident correlations, NYC vs LA comparison.",
+        tags: ["Python", "Folium"],
+        description: "~191k records. Heatmaps, NYC vs LA comparison.",
         link: "https://github.com/Heffri/traffic-incidents-USA",
       },
     ],
   },
   {
-    name: "Numerical Simulations",
+    name: "Simulations",
     projects: [
       {
         title: "Population Dynamics",
-        tags: ["Python", "ODEs", "Numerical"],
-        description: "Euler and RK45 solvers for Lotka-Volterra systems. Stability analysis across 2- and 3-species models.",
+        tags: ["Python", "ODEs"],
+        description: "Euler/RK45 solvers for Lotka-Volterra systems.",
         link: "https://github.com/Heffri/population-dynamics",
       },
       {
         title: "Glacier Ice Flow",
-        tags: ["FEniCSx", "FEM", "MPI"],
-        description: "Stokes equations on real Arolla glacier geometry. FEniCSx + MPI parallel computation. Co-authored.",
+        tags: ["FEniCSx", "MPI"],
+        description: "Stokes equations on Arolla glacier, parallel FEM.",
         link: "https://github.com/Heffri/glacier-flow-simulation",
       },
     ],
@@ -52,8 +52,8 @@ const categories: { name: string; projects: Project[] }[] = [
     projects: [
       {
         title: "Database Technology",
-        tags: ["SQL", "Python", "SQLite"],
-        description: "Ensembl genome queries with JOINs and EXPLAIN analysis. SQLite butterfly observation app with index benchmarking.",
+        tags: ["SQL", "SQLite"],
+        description: "Ensembl genome JOINs, index benchmarking.",
         link: "https://github.com/Heffri/database-technology",
       },
     ],
@@ -64,7 +64,7 @@ const categories: { name: string; projects: Project[] }[] = [
       {
         title: "DNA Sequence Analysis",
         tags: ["Python", "Biopython"],
-        description: "SARS-CoV-2 genome parsing, sequence statistics, alignment groundwork.",
+        description: "SARS-CoV-2 genome parsing, sequence statistics.",
         link: "https://github.com/Heffri/dna-sequence-analysis",
       },
     ],
@@ -72,7 +72,6 @@ const categories: { name: string; projects: Project[] }[] = [
 ];
 
 const ProjectsSection = () => {
-  let projectIndex = 0;
   return (
     <section id="projects" className="py-24 relative">
       <motion.div
@@ -80,7 +79,7 @@ const ProjectsSection = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="mb-12"
+        className="mb-10"
       >
         <div className="flex items-baseline gap-4">
           <span className="font-display text-xs text-primary">02</span>
@@ -88,62 +87,52 @@ const ProjectsSection = () => {
         </div>
       </motion.div>
 
-      <div className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {categories.map((category, ci) => (
-          <div key={ci}>
-            <motion.div
-              initial={{ opacity: 0, x: -8 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="flex items-center gap-3 mb-2"
-            >
-              <span className="font-display text-[10px] text-primary tracking-wider">
-                §{String(ci + 1).padStart(2, "0")}
-              </span>
-              <h3 className="font-display text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <motion.div
+            key={ci}
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: ci * 0.04 }}
+            className="border border-border/60 bg-card/30 p-3 flex flex-col gap-2"
+          >
+            <div className="flex items-center justify-between px-1 pb-2 border-b border-border/40">
+              <span className="font-display text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                 {category.name}
-              </h3>
-              <div className="flex-1 h-px bg-border/60" />
-            </motion.div>
-
-            <div className="space-y-0">
-              {category.projects.map((project) => {
-                const i = projectIndex++;
-                return (
-                  <motion.a
-                    key={i}
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.05 }}
-                    className="group block border-t border-border/60 py-6 hover:bg-card/40 transition-all duration-300 px-1"
-                  >
-                    <div className="flex flex-col gap-2">
-                      <div className="flex items-start justify-between gap-4">
-                        <h4 className="font-body text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
-                          {project.title}
-                        </h4>
-                        <div className="flex flex-wrap gap-1.5 shrink-0">
-                          {project.tags.map((tag, j) => (
-                            <span key={j} className="font-display text-[11px] px-2 py-0.5 border border-border text-muted-foreground">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="font-body text-base text-muted-foreground leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-                  </motion.a>
-                );
-              })}
+              </span>
+              <span className="font-display text-[10px] text-primary">
+                {category.projects.length}
+              </span>
             </div>
-          </div>
+
+            {category.projects.map((project, i) => (
+              <a
+                key={i}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block bg-background/60 border border-border/50 p-3 hover:border-primary/60 hover:bg-card/60 transition-all"
+              >
+                <div className="flex items-start justify-between gap-2 mb-1.5">
+                  <h4 className="font-body text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
+                    {project.title}
+                  </h4>
+                  <span className="font-display text-[10px] text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                </div>
+                <p className="font-body text-xs text-muted-foreground leading-relaxed mb-2">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1">
+                  {project.tags.map((tag, j) => (
+                    <span key={j} className="font-display text-[9px] px-1.5 py-0.5 border border-border/60 text-muted-foreground uppercase tracking-wider">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </motion.div>
         ))}
       </div>
 
