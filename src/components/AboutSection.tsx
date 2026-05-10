@@ -45,8 +45,8 @@ const skillGroups: SkillGroup[] = [
 
 const languages = [
   { lang: "English", level: "C2" },
-  { lang: "Swedish", level: "C1" },
-  { lang: "Croatian", level: "B2" },
+  { lang: "Swedish", level: "C2" },
+  { lang: "Croatian", level: "C1" },
   { lang: "French", level: "A2" },
 ];
 
