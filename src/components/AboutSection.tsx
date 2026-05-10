@@ -113,25 +113,16 @@ const AboutSection = () => {
                   <h3 className="font-display text-[10px] tracking-[0.3em] uppercase text-primary mb-4">
                     {group.title}
                   </h3>
-                  <div className="space-y-3">
+                  <ul className="space-y-1.5">
                     {group.categories.map((cat, j) => (
-                      <div key={j}>
-                        <p className="font-display text-[9px] tracking-[0.25em] uppercase text-muted-foreground/70 mb-1.5">
+                      <li key={j} className="font-body text-[12px] text-muted-foreground leading-relaxed">
+                        <span className="font-display text-[9px] tracking-[0.2em] uppercase text-primary/80 mr-2">
                           {cat.label}
-                        </p>
-                        <div className="flex flex-wrap gap-1">
-                          {cat.items.map((item, k) => (
-                            <span
-                              key={k}
-                              className="px-1.5 py-0.5 text-[11px] font-body text-muted-foreground border border-border/60 rounded"
-                            >
-                              {item}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                        </span>
+                        {cat.items.join(" · ")}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               ))}
             </div>
