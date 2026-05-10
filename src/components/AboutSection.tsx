@@ -1,44 +1,45 @@
 import { motion } from "framer-motion";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
-const skillGroups = [
+type SkillCategory = { label: string; items: string[] };
+type SkillGroup = { title: string; categories: SkillCategory[] };
+
+const skillGroups: SkillGroup[] = [
   {
-    title: "Programming Languages",
-    items: ["Python", "R", "SQL", "MATLAB"],
+    title: "Languages",
+    categories: [
+      { label: "Python", items: ["pandas", "NumPy", "SciPy", "PyTorch", "Scikit-Learn", "seaborn", "matplotlib", "Folium"] },
+      { label: "R", items: ["tidyverse", "ggplot2", "lme4"] },
+      { label: "SQL", items: ["PostgreSQL", "SQLite", "MariaDB", "Query Optimization", "DAX"] },
+      { label: "MATLAB", items: ["SPDE simulation", "Parallel computing", "Numerical methods"] },
+    ],
   },
   {
     title: "Libraries & Frameworks",
-    items: [
-      "NumPy",
-      "SciPy",
-      "pandas",
-
-      "matplotlib",
-      "seaborn",
-      "Plotly",
-      "tidyverse",
-      "ggplot2",
-      "lme4",
-      "FEniCSx",
-      "Folium",
+    categories: [
+      { label: "ML & AI", items: ["PyTorch", "Scikit-Learn", "LLMs (Claude, Cursor)", "RAG pipelines"] },
+      { label: "Data", items: ["pandas", "NumPy", "SciPy", "tidyverse"] },
+      { label: "Visualization", items: ["matplotlib", "seaborn", "Plotly", "ggplot2", "Folium"] },
+      { label: "Scientific", items: ["FEniCSx", "lme4", "Three.js"] },
     ],
   },
   {
     title: "Methods",
-    items: [
-      "Regression",
-      "Classification",
-      "Cross-validation",
-      "Mixed-effects models",
-      "Hypothesis testing",
-      "EDA",
-      "A/B testing",
-      "FEM",
-      "ODE/PDE solvers",
+    categories: [
+      { label: "Statistical Modeling", items: ["Regression", "Classification", "Mixed-effects models", "Hypothesis testing"] },
+      { label: "Validation", items: ["Cross-validation", "LOOCV", "AIC selection", "VIF diagnostics"] },
+      { label: "ML & AI", items: ["Predictive Modeling", "EDA", "RAG pipelines", "RL training"] },
+      { label: "Numerical", items: ["FEM", "ODE/PDE solvers", "SPDEs"] },
     ],
   },
   {
     title: "Tools",
-    items: ["Git", "Jupyter", "RStudio", "SQLite", "MariaDB", "Excel", "Linux", "Typst"],
+    categories: [
+      { label: "Dev", items: ["Git", "Docker", "Linux", "Bash"] },
+      { label: "Notebooks & IDE", items: ["Jupyter", "RStudio", "Cursor"] },
+      { label: "Data Stores", items: ["PostgreSQL", "SQLite", "MariaDB"] },
+      { label: "BI & Docs", items: ["Power BI", "DAX", "Excel", "Typst"] },
+    ],
   },
 ];
 
