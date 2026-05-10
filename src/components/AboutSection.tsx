@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+
 
 type SkillCategory = { label: string; items: string[] };
 type SkillGroup = { title: string; categories: SkillCategory[] };
