@@ -114,13 +114,35 @@ const AboutSection = () => {
                     {group.title}
                   </h3>
                   <div className="flex flex-wrap gap-1.5">
-                    {group.items.map((item, j) => (
-                      <span
-                        key={j}
-                        className="px-2 py-1 text-xs font-body text-muted-foreground border border-border rounded"
-                      >
-                        {item}
-                      </span>
+                    {group.categories.map((cat, j) => (
+                      <HoverCard key={j} openDelay={80} closeDelay={80}>
+                        <HoverCardTrigger asChild>
+                          <button
+                            type="button"
+                            className="px-2 py-1 text-xs font-body text-muted-foreground border border-border rounded hover:border-primary hover:text-primary transition-colors cursor-default"
+                          >
+                            {cat.label}
+                          </button>
+                        </HoverCardTrigger>
+                        <HoverCardContent
+                          align="start"
+                          className="w-auto max-w-xs p-3 bg-card border-border"
+                        >
+                          <p className="font-display text-[9px] tracking-[0.3em] uppercase text-primary mb-2">
+                            {cat.label}
+                          </p>
+                          <div className="flex flex-wrap gap-1">
+                            {cat.items.map((item, k) => (
+                              <span
+                                key={k}
+                                className="px-1.5 py-0.5 text-[11px] font-body text-muted-foreground border border-border/60 rounded"
+                              >
+                                {item}
+                              </span>
+                            ))}
+                          </div>
+                        </HoverCardContent>
+                      </HoverCard>
                     ))}
                   </div>
                 </div>
