@@ -23,7 +23,7 @@ const ContactSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="font-body text-xl text-foreground/70 italic mb-10">
+        <p className="font-body text-xl text-foreground italic mb-10">
           Happy to talk about statistics, systems, or anything at the seam between them.
         </p>
 

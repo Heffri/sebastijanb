@@ -15,14 +15,14 @@ const ProjectBody = ({ project }: { project: ResearchProject }) => (
         </span>
       )}
     </div>
-    <p className="font-body text-xs text-muted-foreground leading-relaxed mb-2">
+    <p className="font-body text-[13px] text-muted-foreground leading-relaxed mb-2">
       {project.description}
     </p>
     <div className="flex flex-wrap gap-1">
       {project.tags.map((tag) => (
         <span
           key={tag}
-          className="font-display text-[9px] px-1.5 py-0.5 border border-border/60 text-muted-foreground uppercase tracking-wider"
+          className="font-display text-[10px] px-1.5 py-0.5 border border-border/60 text-muted-foreground uppercase tracking-wider"
         >
           {tag}
         </span>
@@ -64,16 +64,16 @@ const ResearchSection = () => {
             className="border border-border/60 bg-card/30 p-3 flex flex-col gap-2"
           >
             <div className="flex items-center justify-between gap-2 px-1 pb-2 border-b border-border/40">
-              <span className="font-display text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              <span className="font-display text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                 {category.name}
               </span>
-              <span className="font-display text-[10px] text-primary shrink-0">
+              <span className="font-display text-[11px] text-primary shrink-0">
                 {category.projects.length}
               </span>
             </div>
 
             {category.note && (
-              <p className="font-display text-[9px] uppercase tracking-[0.15em] text-primary/60 px-1">
+              <p className="font-display text-[10px] uppercase tracking-[0.15em] text-primary px-1">
                 {category.note}
               </p>
             )}

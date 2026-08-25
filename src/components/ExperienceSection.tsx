@@ -37,11 +37,11 @@ const ExperienceSection = () => {
                 className={role.current ? "callout-box" : "border-l-2 border-border pl-5 py-3"}
               >
                 <div className="flex flex-wrap items-baseline gap-x-3">
-                  <p className="font-display text-[11px] tracking-wider uppercase text-primary/70">
+                  <p className="font-display text-[11px] tracking-wider uppercase text-primary">
                     {role.period}
                   </p>
                   {role.arrangement && (
-                    <p className="font-display text-[10px] tracking-wider text-muted-foreground/60">
+                    <p className="font-display text-[11px] tracking-wider text-muted-foreground">
                       {role.arrangement}
                     </p>
                   )}
@@ -52,7 +52,7 @@ const ExperienceSection = () => {
                 <p className="font-body text-base text-muted-foreground mb-2">
                   {role.organisation}
                 </p>
-                <p className="font-body text-[13px] text-muted-foreground/90 leading-[1.75]">
+                <p className="font-body text-base text-muted-foreground leading-[1.75]">
                   {role.description}
                 </p>
               </div>
@@ -75,7 +75,7 @@ const ExperienceSection = () => {
             {degrees.map((degree) => (
               <div key={degree.title}>
                 <div className="callout-box">
-                  <p className="font-display text-[11px] tracking-wider uppercase text-primary/70 mb-1">
+                  <p className="font-display text-[11px] tracking-wider uppercase text-primary mb-1">
                     {degree.period}
                   </p>
                   <h4 className="font-body text-lg font-semibold text-foreground mb-0.5 leading-snug">
@@ -83,7 +83,7 @@ const ExperienceSection = () => {
                   </h4>
                   <p className="font-body text-base text-muted-foreground">{degree.institution}</p>
                   {degree.note && (
-                    <p className="font-body text-[13px] text-muted-foreground/80 mt-1 italic">
+                    <p className="font-body text-sm text-muted-foreground mt-1 italic">
                       {degree.note}
                     </p>
                   )}
@@ -91,16 +91,16 @@ const ExperienceSection = () => {
 
                 {degree.thesis && (
                   <div className="mt-5 border border-border/60 bg-card/30 p-4">
-                    <p className="font-display text-[9px] tracking-[0.25em] uppercase text-primary/70 mb-2">
+                    <p className="font-display text-[10px] tracking-[0.25em] uppercase text-primary mb-2">
                       Thesis
                     </p>
                     <p className="font-body text-sm font-semibold text-foreground leading-snug mb-1.5">
                       {degree.thesis.title}
                     </p>
-                    <p className="font-body text-[13px] text-muted-foreground leading-[1.7]">
+                    <p className="font-body text-base text-muted-foreground leading-[1.7]">
                       {degree.thesis.summary}
                     </p>
-                    <p className="font-display text-[10px] tracking-wider text-muted-foreground/60 mt-3">
+                    <p className="font-display text-[11px] tracking-wider text-muted-foreground mt-3">
                       Supervisor: {degree.thesis.supervisor}
                     </p>
                   </div>

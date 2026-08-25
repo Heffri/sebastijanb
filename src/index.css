@@ -15,14 +15,14 @@
     --popover: 35 12% 80%;
     --popover-foreground: 30 10% 10%;
 
-    --primary: 152 55% 30%;
+    --primary: 152 55% 20%;
     --primary-foreground: 40 20% 95%;
 
     --secondary: 35 10% 72%;
     --secondary-foreground: 30 10% 20%;
 
     --muted: 35 8% 70%;
-    --muted-foreground: 30 6% 35%;
+    --muted-foreground: 30 8% 28%;
 
     --accent: 152 40% 26%;
     --accent-foreground: 40 20% 95%;
@@ -32,7 +32,7 @@
 
     --border: 35 8% 66%;
     --input: 35 8% 66%;
-    --ring: 152 55% 30%;
+    --ring: 152 55% 20%;
 
     --radius: 0.125rem;
 
@@ -41,12 +41,12 @@
 
     --sidebar-background: 35 12% 74%;
     --sidebar-foreground: 30 10% 10%;
-    --sidebar-primary: 152 55% 30%;
+    --sidebar-primary: 152 55% 20%;
     --sidebar-primary-foreground: 40 20% 95%;
     --sidebar-accent: 35 8% 70%;
     --sidebar-accent-foreground: 30 10% 20%;
     --sidebar-border: 35 8% 66%;
-    --sidebar-ring: 152 55% 30%;
+    --sidebar-ring: 152 55% 20%;
   }
 }
 
@@ -81,15 +81,15 @@
   }
 
   .margin-note {
-    @apply font-display text-[11px] text-muted-foreground leading-relaxed;
+    @apply font-display text-[12px] text-muted-foreground leading-relaxed;
   }
 
   .glow-primary {
-    box-shadow: 0 0 20px hsl(152 55% 30% / 0.08);
+    box-shadow: 0 0 20px hsl(152 55% 20% / 0.08);
   }
 
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(152 55% 30%), hsl(152 45% 42%));
+    background-image: linear-gradient(135deg, hsl(152 55% 20%), hsl(152 45% 34%));
   }
 }

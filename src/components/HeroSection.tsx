@@ -28,7 +28,7 @@ const HeroSection = () => {
           <p className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-2">
             Currently
           </p>
-          <p className="font-body text-lg text-foreground/80 leading-relaxed">
+          <p className="font-body text-lg text-foreground leading-relaxed">
             Founding engineer at East Sea Technologies, building{" "}
             <span className="text-foreground font-semibold">Verah</span> &mdash; field software for
             Swedish VVS and heat-pump firms, live in production. Reading for an M.Sc. in Machine

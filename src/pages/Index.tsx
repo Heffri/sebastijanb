@@ -10,7 +10,7 @@ import { useVisitTracker } from "@/hooks/useVisitTracker";
 const Divider = () => (
   <div className="w-full flex items-center gap-4 py-2">
     <div className="flex-1 h-px bg-border" />
-    <span className="font-display text-[10px] text-muted-foreground/40">&#10022;</span>
+    <span className="font-display text-[11px] text-muted-foreground">&#10022;</span>
     <div className="flex-1 h-px bg-border" />
   </div>
 );
@@ -87,10 +87,10 @@ const Index = () => {
 
       <footer className="mt-12 py-10 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-10 flex items-center justify-between">
-          <p className="font-display text-[11px] tracking-wider text-muted-foreground/50">
+          <p className="font-display text-[11px] tracking-wider text-muted-foreground">
             &copy; 2026 Sebastijan Babi&#263;
           </p>
-          <p className="font-display text-[11px] tracking-wider text-muted-foreground/30">
+          <p className="font-display text-[11px] tracking-wider text-muted-foreground">
             Stockholm, Sweden
           </p>
         </div>

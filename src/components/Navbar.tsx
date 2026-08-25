@@ -29,11 +29,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-1">
           {links.map((l, i) => (
             <span key={l.href} className="flex items-center">
-              <a href={l.href} className="font-display text-[11px] tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300 px-4 py-1">
+              <a href={l.href} className="font-display text-[12px] tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300 px-4 py-1">
                 {l.label}
               </a>
               {i < links.length - 1 && (
-                <span className="text-border text-[8px]">·</span>
+                <span className="text-border text-[10px]">·</span>
               )}
             </span>
           ))}
