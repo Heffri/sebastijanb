@@ -11,7 +11,7 @@ const ContactSection = () => {
         className="mb-12"
       >
         <div className="flex items-baseline gap-4">
-          <span className="font-display text-xs text-primary">04</span>
+          <span className="font-display text-xs text-primary">05</span>
           <h2 className="font-body text-3xl font-bold text-foreground">Contact</h2>
         </div>
         <div className="w-full h-px bg-border mt-4" />
@@ -23,7 +23,9 @@ const ContactSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="font-body text-xl text-foreground/70 italic mb-10">Contact me here.</p>
+        <p className="font-body text-xl text-foreground/70 italic mb-10">
+          Happy to talk about statistics, systems, or anything at the seam between them.
+        </p>
 
         <div className="space-y-0 max-w-lg">
           {[

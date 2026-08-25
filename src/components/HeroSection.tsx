@@ -14,28 +14,40 @@ const HeroSection = () => {
         </p>
 
         <h1 className="font-body text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-foreground mb-8">
-          Sebastijan Babić
+          Sebastijan Babi&#263;
         </h1>
 
         <div className="w-24 h-px bg-primary mb-8" />
 
-        <p className="font-body text-xl text-muted-foreground max-w-xl leading-relaxed italic">
-          Maths & CS Student. Mathematical Statistics, Data Science, Numerical Methods.
+        <p className="font-body text-xl text-muted-foreground max-w-2xl leading-relaxed italic">
+          Mathematical statistics and machine learning. I derive the maths and then ship the
+          system that runs on it.
         </p>
 
-        <div className="callout-box mt-12 max-w-lg">
-          <p className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-1">Looking for</p>
-          <p className="font-body text-lg text-foreground/80">
-            Internships in data science, analytics, or quantitative research
+        <div className="callout-box mt-12 max-w-2xl">
+          <p className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-2">
+            Currently
+          </p>
+          <p className="font-body text-lg text-foreground/80 leading-relaxed">
+            Founding engineer at East Sea Technologies, building{" "}
+            <span className="text-foreground font-semibold">Verah</span> &mdash; field software for
+            Swedish VVS and heat-pump firms, live in production. Reading for an M.Sc. in Machine
+            Learning &amp; Mathematical Statistics at Stockholm University.
           </p>
         </div>
 
-        <div className="flex gap-4 mt-12">
+        <div className="flex flex-wrap gap-4 mt-12">
           <a
-            href="#projects"
+            href="#work"
             className="px-6 py-3 bg-primary text-primary-foreground font-display text-xs tracking-wider uppercase hover:opacity-90 transition-opacity"
           >
-            Projects
+            Systems
+          </a>
+          <a
+            href="#research"
+            className="px-6 py-3 border border-border text-muted-foreground font-display text-xs tracking-wider uppercase hover:text-foreground hover:border-foreground/30 transition-colors"
+          >
+            Research
           </a>
           <a
             href="#contact"

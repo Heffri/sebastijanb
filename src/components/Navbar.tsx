@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
+  { label: "Systems", href: "#work" },
+  { label: "Research", href: "#research" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
