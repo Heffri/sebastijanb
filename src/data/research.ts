@@ -49,6 +49,18 @@ export const researchCategories: ResearchCategory[] = [
     ],
   },
   {
+    name: "Finance & insurance AI",
+    note: "Vivicta × 2Hero hackathon, Sep 2026",
+    projects: [
+      {
+        title: "Annual report parser for SEB",
+        tags: ["Python", "Anthropic API", "PDF", "Web UI"],
+        description:
+          "Team entry for SEB's challenge in Vivicta and 2Hero's Finance & Insurance AI hackathon. A proof of concept that turns corporate annual report PDFs into structured data, with a web interface, built on the Anthropic API and tested on large Swedish listed companies.",
+      },
+    ],
+  },
+  {
     name: "Statistics & machine learning",
     projects: [
       {

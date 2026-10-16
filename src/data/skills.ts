@@ -17,17 +17,19 @@ export const skillGroups: SkillGroup[] = [
     categories: [
       { label: "Modelling", items: ["Regression", "Classification", "Mixed-effects models", "Hypothesis testing"] },
       { label: "Validation", items: ["Cross-validation", "LOOCV", "AIC selection", "VIF diagnostics"] },
-      { label: "Stochastics", items: ["Wiener processes", "SDEs / SPDEs", "Monte Carlo", "Markov chains"] },
+      { label: "Stochastics", items: ["Wiener processes", "SDEs / SPDEs", "Monte Carlo", "Markov chains", "Martingale theory"] },
+      { label: "Inference", items: ["Statistical inference", "Logistic regression", "Statistical learning"] },
       { label: "Numerical", items: ["FEM", "ODE / PDE solvers", "FEniCSx", "Adaptive integrators"] },
     ],
   },
   {
     title: "AI engineering",
     categories: [
-      { label: "Retrieval", items: ["pgvector", "HNSW", "Voyage embeddings", "Cosine ranking"] },
-      { label: "LLM systems", items: ["Prompt caching", "Multi-model routing", "Token & cost accounting", "PII sanitisation"] },
+      { label: "Retrieval", items: ["RAG pipelines", "pgvector", "HNSW", "Voyage embeddings", "Cosine ranking"] },
+      { label: "LLM systems", items: ["Prompt engineering", "Prompt caching", "Multi-model routing", "Token & cost accounting", "PII sanitisation", "Structured extraction from PDFs"] },
       { label: "Speech", items: ["Deepgram Nova-2", "Swedish transcription", "Domain post-editing"] },
-      { label: "Frameworks", items: ["Claude API", "PyTorch", "scikit-learn"] },
+      { label: "Frameworks", items: ["Claude API", "Anthropic API", "PyTorch", "scikit-learn"] },
+      { label: "AI-assisted dev", items: ["Claude Code", "Cursor", "Lovable"] },
     ],
   },
   {
@@ -35,7 +37,7 @@ export const skillGroups: SkillGroup[] = [
     categories: [
       { label: "Backend", items: ["Supabase", "FastAPI", "Drizzle", "SQLAlchemy", "Alembic", "Celery"] },
       { label: "Frontend", items: ["TanStack Start / Query", "Next.js", "Tailwind", "shadcn/ui"] },
-      { label: "Infrastructure", items: ["Cloudflare Workers", "Docker", "Nginx", "GitHub Actions", "Linux"] },
+      { label: "Infrastructure", items: ["Cloudflare Workers", "Serverless / edge", "Docker", "Nginx", "GitHub Actions", "Linux", "Bash", "Git"] },
       { label: "Testing", items: ["Vitest", "Playwright", "pytest", "ESLint / Ruff"] },
     ],
   },

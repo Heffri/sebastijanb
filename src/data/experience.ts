@@ -36,16 +36,25 @@ export const roles: Role[] = [
       "Teaching assistant at the Department of Mathematics, alongside the master's programme.",
   },
   {
-    period: "Aug 2026 – present",
+    period: "Jan 2026 – present",
+    title: "Developer",
+    organisation: "Townhall Analytics",
+    arrangement: "Part-time · remote",
+    current: true,
+    description:
+      "Founding-team developer on OpinionLive, a Swedish platform where citizens create, sign and track petitions under a BankID-verified identity. Backend, data architecture and the signing flow.",
+  },
+  {
+    period: "Sep 2026 – Mar 2027",
     title: "Trainee — Framtidens försäkringstalanger",
     organisation: "SFM Svenska Försäkringsförmedlare",
-    arrangement: "Six-month programme",
+    arrangement: "Trainee programme",
     current: true,
     description:
       "Selected for the industry-wide trainee programme run by SFM, the Swedish Insurance Brokers' Association, including one-to-one mentorship with a senior figure in the industry.",
   },
   {
-    period: "Mar 2026 – Aug 2026",
+    period: "Mar 2026 – Sep 2026",
     title: "Cybersecurity Instructor",
     organisation: "Unga Forskare",
     arrangement: "Part-time · hybrid",
