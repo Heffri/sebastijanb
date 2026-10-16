@@ -48,7 +48,7 @@ export const workSystems: WorkSystem[] = [
   },
   {
     name: "OpinionLive",
-    context: "Townhall Analytics · developer",
+    context: "Townhall Analytics · founding engineer",
     period: "2026",
     status: "In development",
     summary:

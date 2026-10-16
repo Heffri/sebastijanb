@@ -37,12 +37,12 @@ export const roles: Role[] = [
   },
   {
     period: "Jan 2026 – present",
-    title: "Developer",
+    title: "Founding Engineer",
     organisation: "Townhall Analytics",
     arrangement: "Part-time · remote",
     current: true,
     description:
-      "Founding-team developer on OpinionLive, a Swedish platform where citizens create, sign and track petitions under a BankID-verified identity. Backend, data architecture and the signing flow.",
+      "Founding engineer on OpinionLive, a Swedish platform where citizens create, sign and track petitions under a BankID-verified identity. Backend, data architecture and the signing flow.",
   },
   {
     period: "Sep 2026 – Mar 2027",
