@@ -31,8 +31,10 @@ const HeroSection = () => {
           <p className="font-body text-lg text-foreground leading-relaxed">
             Founding engineer at East Sea Technologies, building{" "}
             <span className="text-foreground font-semibold">Verah</span> &mdash; field software for
-            Swedish VVS and heat-pump firms, live in production. Reading for an M.Sc. in Machine
-            Learning &amp; Mathematical Statistics at Stockholm University.
+            Swedish VVS and heat-pump firms, live in production. Also founding engineer at
+            Townhall Analytics, building{" "}
+            <span className="text-foreground font-semibold">OpinionLive</span>. Reading for an
+            M.Sc. in Machine Learning &amp; Mathematical Statistics at Stockholm University.
           </p>
         </div>
 
