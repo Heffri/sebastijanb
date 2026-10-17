@@ -101,16 +101,10 @@ export const researchCategories: ResearchCategory[] = [
           "About 191k incident records from 2017–2019. Bounding-box filtering, Folium heatmaps, and a signal-versus-junction breakdown that contradicted the starting hypothesis: Los Angeles recorded roughly twice as many accidents as New York City.",
         link: "https://github.com/Heffri/traffic-incidents-USA",
       },
-      {
-        title: "Military movement prediction",
-        tags: ["Python", "Geospatial"],
-        description: "Movement prediction over terrain and route constraints.",
-        link: "https://github.com/Heffri/military-movement-prediction",
-      },
     ],
   },
   {
-    name: "Databases & bioinformatics",
+    name: "Databases",
     projects: [
       {
         title: "Database technology",
@@ -118,12 +112,6 @@ export const researchCategories: ResearchCategory[] = [
         description:
           "Joins across the Ensembl genome schema, with index strategies benchmarked rather than assumed.",
         link: "https://github.com/Heffri/database-technology",
-      },
-      {
-        title: "DNA sequence analysis",
-        tags: ["Python", "Biopython"],
-        description: "SARS-CoV-2 genome parsing and sequence statistics.",
-        link: "https://github.com/Heffri/dna-sequence-analysis",
       },
     ],
   },
