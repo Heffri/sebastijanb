@@ -96,20 +96,4 @@ export const workSystems: WorkSystem[] = [
     ],
     source: "private",
   },
-  {
-    name: "scrapling-legal-data",
-    context: "Open-data-first legal corpus scraper",
-    period: "2026",
-    status: "Open source",
-    summary:
-      "Fourteen Swedish legal sources — statutes, case law from six courts, parliamentary documents, and agency decisions — mapped to short, uniform command-line pipelines. The design rule is that an official feed always beats scraped HTML, so the scraper is the fallback and not the default.",
-    highlights: [
-      "Prefers the Riksdagen and rättspraxis APIs, IMY's list search and agency Atom feeds; HTML parsing is reserved for the sources that publish no feed at all.",
-      "Each source is a four-verb pipeline — index, fetch, parse, status — so adding a source means implementing an interface, not writing another bespoke script.",
-      "Respects robots rules as a first-class module rather than an afterthought.",
-    ],
-    stack: ["Python", "Scrapling", "CLI", "Open data APIs"],
-    link: { href: "https://github.com/Heffri/scrapling_legal_data", label: "github.com/Heffri/scrapling_legal_data" },
-    source: "public",
-  },
 ];
