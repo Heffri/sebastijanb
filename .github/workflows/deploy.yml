@@ -21,9 +21,25 @@ jobs:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
       - run: bun install --frozen-lockfile
-      - run: bun run build
+      - name: Build
+        run: |
+          missing=0
+          for name in VITE_SUPABASE_PROJECT_ID VITE_SUPABASE_URL VITE_SUPABASE_PUBLISHABLE_KEY; do
+            if [ -z "${!name}" ]; then
+              echo "::error::Missing Actions repository variable $name"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "::error::Create the repository variables before this workflow runs. An empty value is inlined into the client and the live site loses Supabase."
+            exit 1
+          fi
+          bun run build
         env:
           VITE_BASE: /sebastijanb/
+          VITE_SUPABASE_PROJECT_ID: ${{ vars.VITE_SUPABASE_PROJECT_ID }}
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - name: SPA fallback for client-side routes
         run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
