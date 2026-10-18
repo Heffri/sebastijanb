@@ -11,9 +11,10 @@ Deno.serve(async (req) => {
   }
 
   try {
-    // Check password
-    const url = new URL(req.url);
-    const password = (url.searchParams.get("password") || req.headers.get("x-analytics-password") || "").trim();
+    // Header only. A ?password= query is ignored so the secret is not stored in
+    // access logs, browser history, or Referer. The analytics page already sends
+    // x-analytics-password.
+    const password = (req.headers.get("x-analytics-password") || "").trim();
     const expectedPassword = (Deno.env.get("ANALYTICS_PASSWORD") || "").trim();
 
     if (!expectedPassword) {
